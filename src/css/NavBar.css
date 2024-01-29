@@ -1,0 +1,21 @@
+.Header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+  font-size: 20px;
+}
+.ShopApp {
+  text-decoration: none;
+  color: #fff;
+}
+.Navbar {
+  padding-right: 20px;
+}
+.Navbar a {
+  text-decoration: none;
+  color: #fff;
+  padding-left: 20px;
+}

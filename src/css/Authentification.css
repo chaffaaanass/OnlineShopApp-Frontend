@@ -1,0 +1,42 @@
+.Authentification{
+    padding: 100px 450px 20px 450px;
+}
+.Authentification h2 {
+    text-align: center;
+    font-size: 40px;
+}
+.Authentification .formAuth{
+    display: grid;
+}
+.Authentification label
+{
+    padding: 10px;
+    font-size: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.Authentification input[type="email"]
+{
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
+}
+.Authentification input[type="password"]
+{
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
+}
+.Authentification button
+{
+    background-color: #333;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+    

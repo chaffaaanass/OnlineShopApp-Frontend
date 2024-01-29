@@ -1,0 +1,30 @@
+.Carts{
+    padding: 20px;
+}
+.Carts h2{
+    text-align: center;
+}
+.Carts table {
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+.Carts table tr td{
+    padding: 20px;
+}
+.Carts table tr:first-child{
+    background-color: #333;
+    color: white;
+}
+.Carts p {
+    text-align: center;
+    font-size: 20px;
+}
+.Carts table tr td button{
+    background-color: #333;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+
+}

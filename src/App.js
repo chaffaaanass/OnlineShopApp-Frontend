@@ -1,24 +1,47 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ProductList from './components/ProductList';
+import CartItemsList from './components/CartItems';
+import Register from './components/Registeration';
+import Login from './components/Login';
+import NavBar from './components/NavBar';
+
 import './App.css';
 
 function App() {
+  const [accessToken, setAccessToken] = useState(() => localStorage.getItem('accessToken') || '');
+  useEffect(() => {
+    if (accessToken) {
+      localStorage.setItem('accessToken', accessToken);
+    } else {
+      localStorage.removeItem('accessToken');
+    }
+  }, [accessToken]);
+  const handleLoginSuccess = (token) => {
+    setAccessToken(token);
+    
+  };
+  console.log('token : ',accessToken);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <section>
+      <NavBar/>
+      <Router>
+        <Routes>
+          <Route
+            path="/login"
+            element={<Login onLoginSuccess={handleLoginSuccess} />}
+          />
+          <Route
+            path="/"
+            element={<ProductList accessToken={accessToken} />}
+          />
+          <Route path="/carts" element={<CartItemsList accessToken={accessToken} />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </Router>
+    </section>
+
   );
 }
 

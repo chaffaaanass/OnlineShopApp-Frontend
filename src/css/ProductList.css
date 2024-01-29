@@ -1,0 +1,34 @@
+.Products{
+    padding: 20px;
+}
+.Products h2{
+    text-align: center;
+}
+.Products table {
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+.Products table tr td{
+    padding: 20px;
+}
+.Products table tr:first-child{
+    background-color: #333;
+    color: white;
+}
+.cartbutton {
+    display: grid;
+    padding-top: 50px;
+}
+.Products table tr td button{
+    background-color: #333;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+input[type="number"] {
+    text-align: center;
+    border-radius: 20px;
+}
